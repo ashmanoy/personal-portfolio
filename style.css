@@ -1,4 +1,4 @@
- body {
+body {
         margin: 0;
     }
 
@@ -509,7 +509,7 @@
 
         /*Hero*/
         #hero {
-            height: 600px;
+            height: 400px;
         }
 
         #profile-picture {
@@ -542,7 +542,7 @@
 
         .blue-card {
             width: 85%;
-            height: 250px;
+            height: 300px;
         }
 
         .blue-card img {
@@ -647,10 +647,6 @@
             transform: translateY(10px);
         }
 
-        100% {
-            opacity: 1;
-        }
-    }
         100% {
             opacity: 1;
         }
