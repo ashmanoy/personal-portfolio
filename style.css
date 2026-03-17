@@ -1,4 +1,4 @@
-       body {
+body {
         margin: 0;
     }
 
@@ -11,10 +11,11 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 999;
+        z-index: 9999;
         background-color: rgb(1, 41, 73);
         padding-block: 10px;
         justify-content: center;
+        align-items: center;
         gap: 20px;
         box-shadow: 0px 0px 10px;
     }
@@ -68,6 +69,8 @@
 
 
     /*Home Section*/
+
+    /*Hero*/
     #hero {
         display: flex;
         flex-direction: column;
@@ -122,6 +125,10 @@
         font-size: 20px;
     }
 
+
+
+
+    /*About Me*/
     .about-me {
         background: #ffffff;
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(171, 241, 245, 1) 100%);
@@ -200,7 +207,7 @@
         position: relative;
         background: radial-gradient(circle, rgba(228, 247, 247, 1) 0%, rgba(184, 225, 255, 1) 100%);
         border-radius: 50px;
-        border: 4px solid black;
+        border: 3px solid black;
         width: 150px;
         padding: 10px;
         transition: transform 0.2s ease;
@@ -235,6 +242,7 @@
 
     .white-card img {
         height: 80px;
+        width: 80px;
     }
 
     .white-card h2 {
@@ -367,8 +375,8 @@
         font-family: "Raleway";
         font-size: 0.9rem;
         resize: vertical;
-        box-sizing: border-box;
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
     .contact-card a {
@@ -389,8 +397,10 @@
     }
 
 
-    /*Message Sent Page*/
 
+
+
+    /*Message Sent Page*/
     .message-sent {
         display: flex;
         flex-direction: column;
@@ -418,45 +428,6 @@
 
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /*Footer*/
     footer {
@@ -472,6 +443,15 @@
     footer h3 {
         margin: 0;
     }
+
+
+
+
+
+
+
+
+
 
     /*Screen Size Adjustments*/
     @media (min-width: 900px) {
@@ -502,8 +482,54 @@
 
 
 
+    /*Mobile View*/
+    @media (max-width: 320px) {
 
-    @media (max-width: 800px) {
+        /*All*/
+        h2 {
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+
+        p {
+            font-size: 11px;
+        }
+
+        nav {
+            gap: 5px;
+        }
+
+        nav a {
+            font-size: 10px;
+        }
+
+
+        /*Hero*/
+        #hero {
+            height: 600px;
+        }
+
+        #profile-picture {
+            height: 150px;
+        }
+
+        .hero-container p {
+            font-size: 10px;
+        }
+
+        .hero-container h1 {
+            font-size: 30px;
+        }
+
+
+        /*About Me*/
+        .about-me p {
+            font-size: 11px;
+        }
+
 
         .blue-card-wrap {
             margin-block: 30px;
@@ -515,7 +541,82 @@
         }
 
         .blue-card {
-            width: 94%;
+            width: 85%;
+            height: 250px;
+        }
+
+        .blue-card img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .blue-card h3 {
+            font-size: 15px;
+        }
+
+
+        /*Skills/Projects*/
+        .tech-stack {
+            margin-top: 50px;   
+            padding: 10px;
+        }
+
+        .white-card {
+            width: 80px;
+            border-radius: 20px;
+        }
+
+        .white-card::after {
+            border-radius: 18px;
+        }
+
+        .white-card img {
+            height: 50px;
+            width: 50px;
+        }
+        
+        .white-card h3 {
+            font-size: 10px;
+
+        }
+
+        .instruments {
+            padding: 10px;
+        }
+
+        .project-card {
+            height: 250px;
+        }
+
+        .project-card img {
+            height: 100px;
+        }
+
+
+        /*Contact*/
+        
+
+        .contact-card {
+            border-radius: 18px;
+        }
+
+        .contact-card img{
+            width: 15px;
+            height: 15px;
+        }
+
+        .contact-card h3 {
+            font-size: 10px;
+        }
+
+        /*Footer*/
+        footer h3 {
+            font-size: 15px;
+        }
+
+        footer p {
+            font-size: 12px;
+
         }
     }
 
