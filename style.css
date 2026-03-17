@@ -1,4 +1,4 @@
-body {
+ body {
         margin: 0;
     }
 
@@ -454,7 +454,7 @@ body {
 
 
     /*Screen Size Adjustments*/
-    @media (min-width: 900px) {
+    @media (min-width: 480px) {
         #hero {
             height: 400px;
             flex-direction: row;
@@ -483,7 +483,7 @@ body {
 
 
     /*Mobile View*/
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
 
         /*All*/
         h2 {
@@ -499,7 +499,7 @@ body {
         }
 
         nav {
-            gap: 5px;
+            gap: 10px;
         }
 
         nav a {
@@ -527,7 +527,7 @@ body {
 
         /*About Me*/
         .about-me p {
-            font-size: 11px;
+            font-size: 15px;
         }
 
 
@@ -562,7 +562,7 @@ body {
         }
 
         .white-card {
-            width: 80px;
+            width: 100px;
             border-radius: 20px;
         }
 
@@ -571,8 +571,8 @@ body {
         }
 
         .white-card img {
-            height: 50px;
-            width: 50px;
+            height: 80px;
+            width: 80px;
         }
         
         .white-card h3 {
@@ -589,9 +589,12 @@ body {
         }
 
         .project-card img {
-            height: 100px;
+            height: 120px;
         }
-
+        
+        .project-card a {
+            
+        }
 
         /*Contact*/
         
@@ -601,8 +604,8 @@ body {
         }
 
         .contact-card img{
-            width: 15px;
-            height: 15px;
+            width: 18px;
+            height: 18px;
         }
 
         .contact-card h3 {
@@ -644,6 +647,10 @@ body {
             transform: translateY(10px);
         }
 
+        100% {
+            opacity: 1;
+        }
+    }
         100% {
             opacity: 1;
         }
