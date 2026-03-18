@@ -603,7 +603,7 @@ body {
 
         .white-card {
             width: 100%;
-            max-width: 140px;
+            max-width: 100px;
             border-radius: 20px;
             flex-grow: 1;
         }
