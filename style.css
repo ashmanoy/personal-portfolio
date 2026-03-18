@@ -2,8 +2,6 @@ body {
         margin: 0;
     }
 
-
-
     /*Navigation*/
     nav {
         display: flex;
@@ -54,38 +52,23 @@ body {
         text-align: center;
     }
 
-    .card-wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-bottom: 50px;
-        gap: 20px;
-    }
-
-
-
-
-
     /*Home Section*/
-
     /*Hero*/
     #hero {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         background-image: url(images/guitar.jpg);
         background-size: cover;
         background-position: center;
         padding-block: 160px;
-        height: 600px;
+        height: 390px;
         -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
         mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
     }
 
     #profile-picture {
-        height: 250px;
+        height: 300px;
         border-radius: 50px;
         border: 7px double rgb(255, 255, 255);
         box-shadow: 0px 0px 10px;
@@ -96,7 +79,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+
     }
 
     .hero-container h1 {
@@ -104,6 +87,7 @@ body {
         color: white;
         white-space: nowrap;
         margin: 0;
+        margin-inline: 15px;
         overflow: hidden;
         font-family: "Cormorant";
         font-weight: 700;
@@ -113,29 +97,27 @@ body {
     }
 
     .hero-container p {
-        text-align: center;
+        text-align: left;
         color: rgb(255, 255, 255);
         margin-bottom: 0;
-
+        margin-left: 18px;
         animation: fadeInTop 2s;
         font-family: "Montserrat";
         text-shadow: 0px 0px 5px black;
         font-style: italic;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 25px;
     }
-
-
-
 
     /*About Me*/
     .about-me {
         background: #ffffff;
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(171, 241, 245, 1) 100%);
+        padding: 80px;
     }
 
     .about-me p {
-        font-size: 20px;
+        font-size: 18px;
         text-align: justify;
         margin-bottom: 40px;
     }
@@ -143,12 +125,15 @@ body {
     .blue-card {
         display: flex;
         flex-direction: column;
+        flex: 1;
+        min-width: 0;
         justify-content: center;
         align-items: center;
         text-align: center;
         border: 3px solid black;
         border-radius: 50px;
-        width: 40%;
+        width: 100%;
+        max-height: 600px;
         padding: 10px;
         background-color: rgb(123, 193, 255);
         transition: 0.2s;
@@ -173,9 +158,49 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        box-sizing: border-box;
         gap: 10px;
-
     }
+
+
+    /*Gallery*/
+    .gallery {
+        background: #b8feff;
+        background: radial-gradient(circle, rgba(184, 254, 255, 1) 0%, rgba(45, 152, 253, 1) 100%);
+    }
+
+    .gallery p {
+        margin-bottom: 80px;
+    }
+
+    .gallery-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .pictures {
+        display: flex;
+        object-fit: cover;
+        object-position: center;
+        flex-grow: 1;
+        box-sizing: border-box;
+        border: 4px solid black;
+        border-radius: 50px;
+        max-width: 100%;
+        height: 250px;
+        transition: transform 0.2s ease;
+    }
+
+    .pictures:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
+    }
+
 
 
 
@@ -203,7 +228,19 @@ body {
         background: radial-gradient(circle, rgba(163, 255, 175, 1) 0%, rgba(240, 247, 252, 1) 100%);
     }
 
+    .white-card-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
     .white-card {
+        flex-grow: 1;
+        flex-basis: 500;
         position: relative;
         background: radial-gradient(circle, rgba(228, 247, 247, 1) 0%, rgba(184, 225, 255, 1) 100%);
         border-radius: 50px;
@@ -454,36 +491,12 @@ body {
 
 
     /*Screen Size Adjustments*/
-    @media (min-width: 480px) {
-        #hero {
-            height: 400px;
-            flex-direction: row;
-        }
 
-        .hero-container {
-            padding: 20px;
-        }
-
-        .hero-container p {
-            text-align: left;
-            font-size: 30px;
-        }
-
-        .hero-container h1 {
-            text-align: left;
-            font-size: 100px;
-        }
-
-        section {
-            padding-inline: 100px;
-        }
-
-    }
 
 
 
     /*Mobile View*/
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
 
         /*All*/
         h2 {
@@ -510,26 +523,36 @@ body {
         /*Hero*/
         #hero {
             height: 400px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-container {
+            align-items: center;
         }
 
         #profile-picture {
-            height: 150px;
+            height: 250px;
+            width: 250px;
         }
 
         .hero-container p {
-            font-size: 10px;
+            font-size: 20px;
         }
 
         .hero-container h1 {
-            font-size: 30px;
+            font-size: 55px;
         }
 
 
         /*About Me*/
+        .about-me {
+            padding: 35px;
+        }
+
         .about-me p {
             font-size: 15px;
         }
-
 
         .blue-card-wrap {
             margin-block: 30px;
@@ -541,8 +564,7 @@ body {
         }
 
         .blue-card {
-            width: 85%;
-            height: 300px;
+            box-sizing: border-box;
         }
 
         .blue-card img {
@@ -554,16 +576,36 @@ body {
             font-size: 15px;
         }
 
+        .gallery-wrap {
+            flex-direction: column;
+        }
+
+        .pictures {
+            border: 3px solid black;
+            width: 100%;
+        }
+
+        .gallery p {
+            text-align: center;
+            margin: 25px;
+        }
+
 
         /*Skills/Projects*/
         .tech-stack {
-            margin-top: 50px;   
+            margin-top: 50px;
             padding: 10px;
         }
 
+        .white-card-wrap {
+            flex-direction: row;
+        }
+
         .white-card {
-            width: 100px;
+            width: 100%;
+            max-width: 180px;
             border-radius: 20px;
+            flex-grow: 1;
         }
 
         .white-card::after {
@@ -574,7 +616,7 @@ body {
             height: 80px;
             width: 80px;
         }
-        
+
         .white-card h3 {
             font-size: 10px;
 
@@ -586,24 +628,23 @@ body {
 
         .project-card {
             height: 250px;
+            width: 100%;
         }
 
         .project-card img {
             height: 120px;
         }
-        
-        .project-card a {
-            
-        }
+
+
+
 
         /*Contact*/
-        
-
         .contact-card {
             border-radius: 18px;
+            border: 3px solid black;
         }
 
-        .contact-card img{
+        .contact-card img {
             width: 18px;
             height: 18px;
         }
@@ -622,11 +663,6 @@ body {
 
         }
     }
-
-
-
-
-
 
     /*Animations*/
     @keyframes fadeInBottom {
